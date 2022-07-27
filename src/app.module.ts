@@ -5,7 +5,7 @@ import { UsersModule } from './users/users.module';
 @Module({
   imports: [
     MongooseModule.forRoot(
-      'mongodb+srv://totalzero:gu2BVEfe2xPsifmV@cluster0.zfxjj.mongodb.net/test',
+      `mongodb+srv://${process.env.user}:${process.env.password}@cluster0.zfxjj.mongodb.net/test`,
     ),
     UsersModule,
   ],
